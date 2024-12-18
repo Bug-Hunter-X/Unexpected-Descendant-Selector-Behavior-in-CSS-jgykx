@@ -1,0 +1,7 @@
+The following CSS rule is intended to apply styles to elements with the class "error", but it has an unexpected consequence due to the use of a descendant selector: 
+
+```css
+.error p { color: red; }
+```
+
+This rule not only styles `<p>` elements within elements having the class "error", but it also affects any `<p>` element nested deeper than that.  If an element with class "error" contains a `<div>` which in turn contains a `<p>`, that `<p>` will also be styled red even if it isn't directly within the class "error" element.
