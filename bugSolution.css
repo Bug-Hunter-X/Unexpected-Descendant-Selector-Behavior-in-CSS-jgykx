@@ -1,0 +1,7 @@
+To target only the `<p>` elements directly within elements having the class "error", use a child combinator instead: 
+
+```css
+.error > p { color: red; }
+```
+
+The `>` child combinator ensures that only direct children of the `.error` element are selected.  This avoids the unintended styling of nested `<p>` elements.
